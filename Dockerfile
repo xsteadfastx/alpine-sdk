@@ -22,7 +22,8 @@ RUN git config --global user.name "Marvin Steadfast" \
  && git config --global sendemail.smtpserverport 587 \
  && git config --global sendemail.smtpencryption tls \
  && git config --global sendemail.smtpuser xsteadfastx@gmail.com \
- && git config --global sendemail.to alpine-aports@lists.alpinelinux.org
+ && git config --global sendemail.to alpine-aports@lists.alpinelinux.org \
+ && git config --global color.ui false
 
 #RUN git clone git://dev.alpinelinux.org/aports
 
