@@ -1,4 +1,4 @@
-FROM xsteadfastx/alpine-x86:3.3
+FROM xsteadfastx/alpine-x86:edge
 
 RUN apk add --update \
     alpine-sdk \
