@@ -4,6 +4,7 @@ RUN apk add --update \
     alpine-sdk \
     git-email \
     pax-utils \
+    vim \
  && rm -rf /var/cache/apk/* \
  && echo "/home/marv/packages/testing" >> /etc/apk/repositories
 
