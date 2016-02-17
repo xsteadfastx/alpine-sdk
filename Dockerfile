@@ -3,7 +3,9 @@ FROM xsteadfastx/alpine-x86:3.3
 RUN apk add --update \
     alpine-sdk \
     git-email \
- && rm -rf /var/cache/apk/*
+    pax-utils \
+ && rm -rf /var/cache/apk/* \
+ && echo "/home/marv/packages/testing" >> /etc/apk/repositories
 
 RUN adduser -D -s /bin/sh marv
 
@@ -28,3 +30,6 @@ RUN git config --global user.name "Marvin Steadfast" \
 #RUN git clone git://dev.alpinelinux.org/aports
 
 #RUN abuild-keygen -a -i
+
+COPY entrypoint.sh /
+ENTRYPOINT ["/entrypoint.sh"]
